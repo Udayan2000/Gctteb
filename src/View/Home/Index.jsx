@@ -11,6 +11,9 @@ import Marquee from "react-fast-marquee";
 import "./Home.css"
 import { Link } from 'react-router-dom';
 const Index = () => {
+  const blinkStyle = {
+    animation: 'blinking 1s infinite', // 1s duration, infinite iterations
+  };
   var settings = {
     // dots: true,
     infinite: true,
@@ -99,7 +102,7 @@ const Index = () => {
                     </p>
                     <div className='rentxtmain'>
                       <p className='rentpp'>Pre Centenary Reunion - 2024 ( REMINISCENCE-2024 )</p>
-                      <Link className='clckbtn'>
+                      <Link to="" className='clckbtn' style={blinkStyle}>
                         CLICK ME
                       </Link>
                     </div>
@@ -117,15 +120,15 @@ const Index = () => {
 
       <section className='alumunireg'>
         <div className='cust_container'>
-            <div className='allbtnmainreg'>
-              <Link className='regnewbtnal'>Go To Alumuni Registration</Link>
-              <Link className='regnewbtnal'>New Alumuni Registration</Link>
-              <Link className='regnewbtnal'>Complete Alumuni Registration</Link>
-              <Link className='regnewbtnal'>Login and Fill Reunion Details</Link>
-              <Link className='regnewbtnal'>Download Pdf</Link>
+          <div className='allbtnmainreg'>
+            <Link className='regnewbtnal'>Go To Alumuni Registration</Link>
+            <Link className='regnewbtnal'>New Alumuni Registration</Link>
+            <Link className='regnewbtnal'>Complete Alumuni Registration</Link>
+            <Link className='regnewbtnal'>Login and Fill Reunion Details</Link>
+            <Link className='regnewbtnal'>Download Pdf</Link>
 
-            </div>
-        
+          </div>
+
         </div>
       </section>
     </>

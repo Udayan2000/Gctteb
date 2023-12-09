@@ -56,7 +56,7 @@ function Header() {
                     </div>
                 </div>
             </section>
-            <div className={stickyheader? "main_header fixed":"main_header"}>
+            <div className={`main_header ${stickyheader ? "fixed" : ""}`}>
                 <div className='cust_container'>
                     <div className='logo_menu_main'>
 
