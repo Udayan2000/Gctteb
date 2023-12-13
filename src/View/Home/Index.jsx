@@ -69,11 +69,11 @@ const Index = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 1,
-    // fade: true,
-    // autoplay: true,
-    // speed: 3000,
-    // cssEase: "linear",
-    // autoplaySpeed: 2000,
+    fade: true,
+    autoplay: true,
+    speed: 3000,
+    cssEase: "linear",
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,

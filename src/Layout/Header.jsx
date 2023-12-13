@@ -10,7 +10,6 @@ function Header() {
     function setFixed() {
         if (window.scrollY > 100) {
             setStickyheader(true);
-            alert("working");
         } else {
             setStickyheader(false);
         }
@@ -56,7 +55,7 @@ function Header() {
                     </div>
                 </div>
             </section>
-                <div className={`main_header ${stickyheader ? "fixed" : ""}`}>
+                <div className={stickyheader ? "main_header fixed" : "main_header"}>
                 <div className='cust_container'>
                     <div className='logo_menu_main'>
 
