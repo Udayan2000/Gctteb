@@ -260,6 +260,7 @@ body {
 } */
 .main_header {
   background-color: transparent;
+  /* background: red; */
   position: absolute;
   width: 100%;
   height: auto;
@@ -267,8 +268,8 @@ body {
   z-index: 3;
 }
 
-.main_header.scrolled {
-  position: fixed;
+.main_header.fixed {
+  /* position: fixed; */
   top: 0;
   z-index: 99;
   width: 100%;
