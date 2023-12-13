@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -11,9 +11,57 @@ import Marquee from "react-fast-marquee";
 import "./Home.css"
 import { Link } from 'react-router-dom';
 const Index = () => {
-  const blinkStyle = {
-    animation: 'blinking 1s infinite', // 1s duration, infinite iterations
+  const [actvstyl, setActvstyl] = useState(false);
+  const [actvstyla, setActvstyla] = useState(false);
+  const [actvstylb, setActvstylb] = useState(false);
+  const [actvstylc, setActvstylc] = useState(false);
+  const [actvstyld, setActvstyld] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const handlemodalClick = (action) => {
+    switch (action) {
+      case 'goToAlumniRegistration':
+        setActvstyl(!actvstyl);
+        setActvstyla(false);
+        setActvstylb(false);
+        setActvstylc(false);
+        setActvstyld(false);
+        break;
+      case 'newAlumniRegistration':
+        setActvstyla(!actvstyla);
+        setActvstyl(false);
+        setActvstylb(false);
+        setActvstylc(false);
+        setActvstyld(false);
+        break;
+      case 'completeAlumniRegistration':
+        setActvstylb(!actvstylb);
+        setActvstyl(false);
+        setActvstyla(false);
+        setActvstylc(false);
+        setActvstyld(false);
+        break;
+      case 'loginAndFillReunionDetails':
+        setActvstylc(!actvstylc);
+        setActvstyl(false);
+        setActvstyla(false);
+        setActvstylb(false);
+        setActvstyld(false);
+        break;
+      case 'downloadPdf':
+        setActvstyld(!actvstyld);
+        setActvstyl(false);
+        setActvstyla(false);
+        setActvstylb(false);
+        setActvstylc(false);
+        break;
+      default:
+
+        break;
+    }
   };
+
+
+
   var settings = {
     // dots: true,
     infinite: true,
@@ -21,11 +69,11 @@ const Index = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 1,
-    fade: true,
-    autoplay: true,
-    speed: 3000,
+    // fade: true,
+    // autoplay: true,
+    // speed: 3000,
     // cssEase: "linear",
-    autoplaySpeed: 2000,
+    // autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -85,6 +133,7 @@ const Index = () => {
       img: pic5,
     },
   ]
+
   return (
     <>
       <section className=''>
@@ -102,7 +151,7 @@ const Index = () => {
                     </p>
                     <div className='rentxtmain'>
                       <p className='rentpp'>Pre Centenary Reunion - 2024 ( REMINISCENCE-2024 )</p>
-                      <Link to="" className='clckbtn' style={blinkStyle}>
+                      <Link to="" className='clckbtn'>
                         CLICK ME
                       </Link>
                     </div>
@@ -120,15 +169,118 @@ const Index = () => {
 
       <section className='alumunireg'>
         <div className='cust_container'>
-          <div className='allbtnmainreg'>
-            <Link className='regnewbtnal'>Go To Alumuni Registration</Link>
-            <Link className='regnewbtnal'>New Alumuni Registration</Link>
-            <Link className='regnewbtnal'>Complete Alumuni Registration</Link>
-            <Link className='regnewbtnal'>Login and Fill Reunion Details</Link>
-            <Link className='regnewbtnal'>Download Pdf</Link>
 
+          <div className=''>
+            <h4 className='txtregpp'>
+              Go To Alumuni Registration
+            </h4>
           </div>
+          <div className='allbtnmainreg'>
 
+            <Link className={actvstyl ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('goToAlumniRegistration')}>Go To Alumni Registration</Link>
+
+            <Link className={actvstyla ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('newAlumniRegistration')}>New Alumni Registration</Link>
+
+            <Link className={actvstylb ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('completeAlumniRegistration')}>Complete Alumni Registration</Link>
+
+            <Link className={actvstylc ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('loginAndFillReunionDetails')}>Login and Fill Reunion Details</Link>
+
+            <Link className={actvstyld ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('downloadPdf')}>Download Pdf</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className='alumunireg'>
+        <div className='cust_container'>
+
+          <div className=''>
+            <h4 className='txtregpp'>
+              Go To Alumuni Registration
+            </h4>
+          </div>
+          <div className='allbtnmainreg'>
+
+            <Link className={actvstyl ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('goToAlumniRegistration')}>Go To Alumni Registration</Link>
+
+            <Link className={actvstyla ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('newAlumniRegistration')}>New Alumni Registration</Link>
+
+            <Link className={actvstylb ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('completeAlumniRegistration')}>Complete Alumni Registration</Link>
+
+            <Link className={actvstylc ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('loginAndFillReunionDetails')}>Login and Fill Reunion Details</Link>
+
+            <Link className={actvstyld ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('downloadPdf')}>Download Pdf</Link>
+          </div>
+        </div>
+      </section>
+
+
+      <section className='alumunireg'>
+        <div className='cust_container'>
+
+          <div className=''>
+            <h4 className='txtregpp'>
+              Go To Alumuni Registration
+            </h4>
+          </div>
+          <div className='allbtnmainreg'>
+
+            <Link className={actvstyl ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('goToAlumniRegistration')}>Go To Alumni Registration</Link>
+
+            <Link className={actvstyla ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('newAlumniRegistration')}>New Alumni Registration</Link>
+
+            <Link className={actvstylb ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('completeAlumniRegistration')}>Complete Alumni Registration</Link>
+
+            <Link className={actvstylc ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('loginAndFillReunionDetails')}>Login and Fill Reunion Details</Link>
+
+            <Link className={actvstyld ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('downloadPdf')}>Download Pdf</Link>
+          </div>
+        </div>
+      </section>
+
+
+      <section className='alumunireg'>
+        <div className='cust_container'>
+
+          <div className=''>
+            <h4 className='txtregpp'>
+              Go To Alumuni Registration
+            </h4>
+          </div>
+          <div className='allbtnmainreg'>
+
+            <Link className={actvstyl ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('goToAlumniRegistration')}>Go To Alumni Registration</Link>
+
+            <Link className={actvstyla ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('newAlumniRegistration')}>New Alumni Registration</Link>
+
+            <Link className={actvstylb ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('completeAlumniRegistration')}>Complete Alumni Registration</Link>
+
+            <Link className={actvstylc ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('loginAndFillReunionDetails')}>Login and Fill Reunion Details</Link>
+
+            <Link className={actvstyld ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('downloadPdf')}>Download Pdf</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className='alumunireg'>
+        <div className='cust_container'>
+
+          <div className=''>
+            <h4 className='txtregpp'>
+              Go To Alumuni Registration
+            </h4>
+          </div>
+          <div className='allbtnmainreg'>
+
+            <Link className={actvstyl ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('goToAlumniRegistration')}>Go To Alumni Registration</Link>
+
+            <Link className={actvstyla ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('newAlumniRegistration')}>New Alumni Registration</Link>
+
+            <Link className={actvstylb ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('completeAlumniRegistration')}>Complete Alumni Registration</Link>
+
+            <Link className={actvstylc ? "regnewbtnal actv" : "regnewbtnal"} onClick={() => handlemodalClick('loginAndFillReunionDetails')}>Login and Fill Reunion Details</Link>
+
+            <Link className={actvstyld ? "regnewbtnal actv" : "regnewbtnal"}  onClick={() => handlemodalClick('downloadPdf')}>Download Pdf</Link>
+          </div>
         </div>
       </section>
     </>

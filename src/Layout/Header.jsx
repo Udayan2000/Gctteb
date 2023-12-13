@@ -6,7 +6,17 @@ import { Link, NavLink } from 'react-router-dom';
 function Header() {
     const [shownavbar, setShowNavbar] = useState(false)
     const [menuwh, setMenuwh] = useState(false)
-    const[stickyheader,setStickyheader] =useState(false);
+    const [stickyheader, setStickyheader] = useState(false);
+    function setFixed() {
+        if (window.scrollY > 100) {
+            setStickyheader(true);
+            alert("working");
+        } else {
+            setStickyheader(false);
+        }
+    }
+    window.addEventListener("scroll", setFixed);
+
     const handleShowNavbar = () => {
         setShowNavbar(!shownavbar)
     }
@@ -14,16 +24,6 @@ function Header() {
         setMenuwh(!menuwh)
     }
 
-    function setFixed (){
-        if(window.scrollY>100){
-            setStickyheader(true);
-        alert("working")
-        }
-        else{
-            setStickyheader(false)
-        }
-    }
-      window.addEventListener("scroll",setFixed)
 
     return (
         <div>
@@ -56,7 +56,7 @@ function Header() {
                     </div>
                 </div>
             </section>
-            <div className={`main_header ${stickyheader ? "fixed" : ""}`}>
+                <div className={`main_header ${stickyheader ? "fixed" : ""}`}>
                 <div className='cust_container'>
                     <div className='logo_menu_main'>
 
