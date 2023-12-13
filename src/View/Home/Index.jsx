@@ -70,7 +70,8 @@ const Index = () => {
     fade: true,
     autoplay: true,
     speed: 3000,
-    cssEase: "linear",
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+    touchThreshold: 100,
     autoplaySpeed: 2000,
     responsive: [
       {
@@ -122,7 +123,11 @@ const Index = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 1,
+    fade: true,
     autoplay: true,
+    speed: 3000,
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+    touchThreshold: 100,
     autoplaySpeed: 2000,
     responsive: [
       {
@@ -260,8 +265,28 @@ const Index = () => {
           {aboutbannerimg.map((item, index) => {
             return (
               <div>
-                <div className='aboutsldsct'>
-                  <img src={alumni1} alt="..." />
+                <div className='aboutsldsct' key={index}>
+                  <div className='cust_container'>
+                    {/* <img src={item.img} alt="..." /> */}
+                    {/* <div className='cust_container'>
+                    <div className='abouttlstxt'>
+                      <div className='almnnicnflx'>
+                        <i className="fa-solid fa-user-plus"></i>
+                        <p className="abtalmntxt">About Our Alumni</p>
+                      </div>
+                      <div className='allabtlawh'>
+                        <p className='abtalmntxt'>
+                          Our alumni network has a huge span in the field of textile covering top positions of the textile market.Not only this the newly inagurated departments of CSE,ME,EE has a need of alumnus network and through their continious effort they made a vast impact on the market and industry.The alumni committee has formed by the reputed and top alumnis of the GCETTB to make a contribution to their college by incresing placement conditions and help current students to nurture their skills and help them to become industry ready.So that students can make an impact in the market.
+                        </p>
+                      </div>
+                    </div>
+                  </div> */}
+                    <div className=''>
+                      <div className=''>
+                        <img src={item.img} alt="..." />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             )

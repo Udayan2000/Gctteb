@@ -117,11 +117,13 @@
     border-radius: 10px;
     margin: 25px 0px;
 }
-.regnewbtnal.actv{
+
+.regnewbtnal.actv {
     background-color: #01579b;
     color: #FFF;
     padding: 10px;
 }
+
 .regnewbtnal {
     border: none;
     color: #1c87c9;
@@ -139,18 +141,22 @@
     animation: blink 1s infinite;
     background-color: #fff;
 }
+
 @keyframes blink {
     0% {
-      color: red;
+        color: red;
     }
+
     50% {
-      color: blue;
+        color: blue;
     }
+
     100% {
-      color: red;
+        color: red;
     }
-  }
-.txtregpp{
+}
+
+.txtregpp {
     font-size: 25px;
     font-weight: 800;
     line-height: 33px;
@@ -164,26 +170,88 @@
     width: 100%;
     height: auto;
     padding: 30px 0px;
-    background-color:#01579b ;
+    background-color: #01579b;
 }
 
 /* Alumunireg End  */
 
 /* About our alumuni start */
-.abtalumuni{
+.abtalumuni {
     width: 100%;
     height: auto;
-    /* padding: 30px 0px; */
+    padding: 30px 0px;
 }
 .aboutsldsct{
-    width: 100%;
-    height: 400px;
-    position: relative;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.aboutsldsct img{
+
+/* .aboutsldsct {
+    width: 100%;
+    height: 460px;
+    position: relative;
+}
+
+.aboutsldsct img {
     width: 100%;
     height: 100%;
-} 
+    object-fit: cover;
+}
+
+.aboutsldsct::after {
+    position: absolute;
+    content: "";
+    background-color: rgb(0 0 0 / 65%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+} */
+
+/* .abouttlstxt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+} */
+.almnnicnflx{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.almnnicnflx i{
+    font-size: 25px;
+    color: #FFF;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.abtalmntxt{
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 33px;
+    font-family: 'Source Serif 4', serif;
+    color: #FFF;
+}
+.abtalmntxt{
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 22px;
+    font-family: 'Source Serif 4', serif;
+    color: #FFF;   
+    text-align: justify;
+}
+.allabtlawh{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px 0px;
+}
+
 /* About our alumuni end */
 
 @media(max-width:991px) {
